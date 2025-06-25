@@ -1,0 +1,140 @@
+{
+    "header": {
+        "home": "home",
+        "projects": "projects",
+        "about": "about-me",
+        "contacts": "contacts"
+    },
+    "footer": {
+        "description": "Web developer based in Rajasthan, India. I create responsive websites where technologies meet creativity.",
+        "copyright": "Copyright 2025. Made by Parth",
+        "media": "Media"
+    },
+    "skills": {
+        "language": "Languages",
+        "database": "Databases",
+        "other": "Other",
+        "tool": "Tools",
+        "framework": "Frameworks"
+    },
+    "projects": {
+        "chertnodes": {
+            "name": "ChertNodes",
+            "description": "Minecraft servers hosting"
+        },
+        "protectx": {
+            "name": "ProtectX web",
+            "description": "Discord anti-crash bot"
+        },
+        "khanswers": {
+            "name": "Kahoot Answers",
+            "description": "Get answers from kahoot quiz"
+        },
+        "kotikbot": {
+            "name": "KotikBot",
+            "description": "Landing for multi-functional cute discord bot"
+        },
+        "portfolio": {
+            "name": "This Portfolio",
+            "description": "My personal portfolio"
+        },
+        "blog": {
+            "name": "My blog",
+            "description": "Front-end of my future blog website"
+        },
+        "discordbot": {
+            "name": "Discord Bot Boilerplate",
+            "description": "Start creating scalable discord.js bot with typescript in seconds"
+        },
+        "chesspro": {
+            "name": "Chess PRO",
+            "description": "Landing page about service for viewing chess tournaments"
+        },
+        "ooku": {
+            "name": "Ooku",
+            "description": "Link shortener with discord auth"
+        },
+        "madhost": {
+            "name": "MadHost",
+            "description": "Minecraft and websites hosting with low prices"
+        },
+        "feedrum": {
+            "name": "Feedrum",
+            "description": "Ukrainian social network designed for programmers"
+        },
+        "deplos": {
+            "name": "Deplos",
+            "description": "Game servers hosting"
+        },
+        "pixel-battle": {
+            "name": "Pixel Battle",
+            "description": "Pixel art battle game"
+        }
+    },
+    "pages": {
+        "home": {
+            "hero": {
+                "title": "Parth is a <span>web developer</span> and <span>a full time </span> learner",
+                "description": "He crafts responsive websites where technologies meet creativity",
+                "button": "Contact ME",
+                "status": "Open for new opportunities"
+            },
+            "quote": {
+                "text": "With great power comes great electricity bill",
+                "author": "Dr. P"
+            },
+            "projects": {
+                "title": "projects",
+                "button": "View all"
+            },
+            "skills": {
+                "title": "skills"
+            },
+            "about": {
+                "title": "about",
+                "description": [
+"I'm a full-stack web developer based in India and a 2025 BE graduate from Chandigarh University. I specialize in building responsive and intuitive websites from scratch, turning creative ideas into seamless, user-friendly digital experiences.",
+"With a strong passion for web development, I’ve been dedicated to transforming concepts into polished interfaces. I constantly explore the latest web technologies and frameworks to stay ahead and deliver modern, efficient solutions. My goal is to help brands and businesses build a strong and engaging presence online."
+                ],
+                "button": "View all"
+            },
+            "contacts": {
+                "title": "contacts",
+                "text": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
+                "media": "Message me here",
+                "donate": "Donate me here"
+            }
+        },
+        "projects": {
+            "description": "All of my projects",
+            "decent": "decent",
+            "small": "small",
+            "inProgress": "unfinished"
+        },
+        "about": {
+            "description": "Who am i",
+            "about": {
+                "description": [
+                   "I’m a full-stack developer based in India and a 2025 BE graduate. I specialize in building responsive websites from scratch and transforming them into modern, user-friendly web experiences.",
+"Transforming creativity and technical knowledge into functional websites has been my passion for over two years. During this time, I’ve worked on various projects, helping clients establish a strong online presence.",
+"I'm always eager to explore and learn the latest technologies and frameworks to stay updated and deliver high-quality, future-ready solutions."
+                ]
+            },
+            "skills": {
+                "title": "skills"
+            },
+            "facts": {
+                "title": "fun-facts",
+                "list": [
+                    "I like winter more than summer", 
+                    "I often bike with my friends",
+                    "I like pizza and pasta", 
+                    "My favorite movie is The Matrix"
+                ]
+            }
+        },
+        "contacts": {
+            "description": "How to contact me"
+        }
+    }
+}
