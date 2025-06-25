@@ -21,7 +21,18 @@
     "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
-    "build": "webpack",
-    "serve": "webpack serve"
-  }
+  
+     "build": "webpack --mode production",
+   "serve": "webpack serve --mode development"
+  },
+  "builds": [
+    { "src": "package.json", "use": "@vercel/next" }
+  ],
+  "outputDirectory": ".next"
 }
+
+
+
+
+
+
