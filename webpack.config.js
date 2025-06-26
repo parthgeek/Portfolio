@@ -4,7 +4,7 @@ const plugins = {
     css: require("mini-css-extract-plugin"),
     copy: require("copy-webpack-plugin"),
     json: require("json-minimizer-webpack-plugin")
-}
+};
 
 module.exports = {
     entry: {
@@ -14,7 +14,8 @@ module.exports = {
     output: {
         path: resolve(__dirname, "dist"),
         filename: "js/[name].js",
-        chunkFilename: "js/[chunkhash].js"
+        chunkFilename: "js/[chunkhash].js",
+        publicPath: "/" // ✅ Fix: Ensures correct asset resolution on Vercel
     },
     mode: "development",
     plugins: [
@@ -23,9 +24,9 @@ module.exports = {
             filename: "index.html",
             excludeChunks: ["spaHandler"],
             title: "Parth Portfolio",
-            'meta': {
-                'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
-                'theme-color': '#C778DD',
+            meta: {
+                viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+                "theme-color": "#C778DD"
             }
         }),
         new plugins.html({
@@ -36,10 +37,9 @@ module.exports = {
         new plugins.css({
             filename: "css/[name].css",
             chunkFilename: (pathData) => {
-                if (typeof pathData.chunk.id === "number") return "css/[name].css"
-                const name = pathData.chunk.id.split("_").at(-2).toLowerCase()
-
-                return `css/${name}.css`
+                if (typeof pathData.chunk.id === "number") return "css/[name].css";
+                const name = pathData.chunk.id.split("_").at(-2).toLowerCase();
+                return `css/${name}.css`;
             }
         }),
         new plugins.copy({
@@ -54,23 +54,16 @@ module.exports = {
             {
                 test: /\.(sass)$/,
                 use: [plugins.css.loader, "css-loader", "sass-loader"],
-                include: [
-                    join(__dirname, "src/assets/styles")
-                ]
+                include: [join(__dirname, "src/assets/styles")]
             },
             {
                 test: /\.json$/i,
                 type: "asset/resource",
-                include: [
-                    join(__dirname, "src/assets/locales")
-                ]
+                include: [join(__dirname, "src/assets/locales")]
             },
-
             {
                 test: /\.(png|svg|jpe?g|gif)$/i,
-                include: [
-                    join(__dirname, "src/assets/images")
-                ],
+                include: [join(__dirname, "src/assets/images")],
                 type: "asset/resource",
                 generator: {
                     filename: "images/[contenthash][ext]",
@@ -79,9 +72,7 @@ module.exports = {
             {
                 test: /\.(woff(2)?|eot|(o|t)tf)$/i,
                 type: "asset/resource",
-                include: [
-                    join(__dirname, "src/assets/fonts/")
-                ],
+                include: [join(__dirname, "src/assets/fonts/")],
                 generator: {
                     filename: "fonts/[contenthash][ext]",
                 }
@@ -90,16 +81,13 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: join(__dirname, 'dist'),
+            directory: join(__dirname, "dist"),
         },
         port: 9000,
         historyApiFallback: {
-            rewrites: [
-                { from: /./, to: "/404.html" },
-            ],
+            rewrites: [{ from: /./, to: "/404.html" }],
         }
     },
-
     resolve: {
         alias: {
             "@": resolve(__dirname, "src/app/"),
@@ -109,9 +97,6 @@ module.exports = {
     },
     optimization: {
         minimize: true,
-        minimizer: [
-            new plugins.json(),
-        ],
-    },
-
+        minimizer: [new plugins.json()],
+    }
 };
