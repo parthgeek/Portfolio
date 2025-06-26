@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "serve": "webpack serve --mode development"
+    "serve": "webpack serve --mode development",
+    "vercel-build": "pnpm run build"
   }
 }
