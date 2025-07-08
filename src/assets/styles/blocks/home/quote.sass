@@ -1,0 +1,39 @@
+.quote
+  border: 1px solid var(--gray)
+  position: relative
+  margin: 0
+
+  &::before, &::after
+    content: '"'
+    position: absolute
+    color: var(--gray)
+    font-size: 32px          // 🔽 Reduced from 64px
+    font-weight: 700
+    background-image: linear-gradient(var(--background), var(--background))
+    background-size: 100% 40%
+    background-repeat: no-repeat
+
+  &::before
+    top: -16px               // 🔽 Adjusted positioning
+    left: 8px
+
+  &::after
+    bottom: -32px            // 🔽 Adjusted positioning
+    right: 8px
+
+  &__text
+    padding: 16px            // 🔽 Reduced padding
+    font-size: 18px          // 🔽 Smaller text
+    font-weight: 500
+    background-color: var(--background)
+
+  &__author
+    position: absolute
+    color: var(--gray)
+    border: 1px solid var(--gray)
+    padding: 4px             // 🔽 Reduced padding
+    right: -1px
+    font-size: 14px          // 🔽 Smaller font
+
+    &::before
+      content: "- "
